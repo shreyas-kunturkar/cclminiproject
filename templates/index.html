@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Image to Text</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        font-family: 'Poppins', sans-serif;
+                    }
+                    
+                    body {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        min-height: 100vh;
+                        background: #5256AD;
+                    }
+                    
+                    .wrapper {
+                        width: 770px;
+                        padding: 125px 130px;
+                        border-radius: 7px;
+                        background: #fff;
+                        box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
+                    }
+                    
+                    .wrapper header {
+                        font-size: 28px;
+                        font-weight: 500;
+                        text-align: center;
+                    }
+                    
+                    .wrapper form {
+                        margin: 35px 0 20px;
+                    }
+                    
+                    form button {
+                        height: 52px;
+                        color: #fff;
+                        font-size: 17px;
+                        cursor: pointer;
+                        margin-top: 30px;
+                        background: darkgrey;
+                        transition: 0.3s ease;
+                    }
+                    
+                    form .row label {
+                        font-size: 22px;
+                        margin-bottom: 5px;
+                    }
+                    
+                    form .row {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    form .row textarea {
+                        resize: none;
+                        height: 110px;
+                        font-size: 15px;
+                        padding: 8px 10px;
+                        border: 1px solid #999;
+                    }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>Optical Character Recognition</header>
+        <form action="{{url_for('image_to_text')}}" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <label>Upload Image Link:</label>
+            </div>
+            <p> Paste Image Link :
+                <input type="text" name="files" />
+            </p>
+            <button>Convert To Text</button><br>
+            <div class="row">
+                <label>Text :-</label>
+                <textarea rows="40">{{text}}</textarea>
+        </form>
+        </div>
+
+</body>
+
+</html>
