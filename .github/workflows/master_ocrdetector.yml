@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'ocrdetector'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_96F5E1FD927D408B96E1FE2645587F14 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F671E9BE2BC440E8BC1444F65A973E07 }}
